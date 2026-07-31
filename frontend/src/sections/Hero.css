@@ -5,6 +5,14 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  
+  /* Force dark mode variables for Hero section only */
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --card-bg: rgba(15, 15, 15, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(20, 20, 25, 0.6);
+  color: var(--text-main);
 }
 
 .hero-video-wrapper {

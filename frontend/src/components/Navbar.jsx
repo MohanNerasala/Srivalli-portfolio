@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { Menu, Moon, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -60,8 +60,8 @@ const Navbar = () => {
         </div>
 
         <div className="nav-actions">
-          <button className="icon-button moon-btn" aria-label="Toggle Theme">
-            <Moon size={18} />
+          <button className="icon-button moon-btn" aria-label="Toggle Theme" onClick={toggleTheme}>
+            {theme === 'light' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <a href="#contact" className="hire-me-btn">HIRE ME</a>
           <button 

@@ -13,6 +13,27 @@
   --font-mono: 'JetBrains Mono', monospace;
   --glass-bg: rgba(20, 20, 25, 0.6);
   --glass-border: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(15, 15, 15, 0.85);
+  --card-hover: rgba(20, 20, 20, 0.95);
+  --shadow-color: rgba(0, 0, 0, 0.8);
+  --hero-overlay-start: rgba(0, 0, 0, 0.95);
+  --hero-overlay-mid: rgba(0, 0, 0, 0.5);
+  --hero-overlay-end: transparent;
+}
+
+body.light-mode {
+  --bg-dark: #ffffff;
+  --bg-gradient: none;
+  --text-main: #111111;
+  --text-muted: #555555;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --card-bg: #f8f9fa;
+  --card-hover: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hero-overlay-start: rgba(255, 255, 255, 0.95);
+  --hero-overlay-mid: rgba(255, 255, 255, 0.5);
+  --hero-overlay-end: transparent;
 }
 
 html {
@@ -80,9 +101,9 @@ button {
 
 /* Premium Glassmorphism Utility */
 .glass-panel {
-  background: rgba(15, 15, 15, 0.95); /* Solid dark instead of expensive blur */
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  transform: translateZ(0); /* Force GPU */
+  background: var(--card-bg); /* Solid background instead of expensive blur */
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 var(--shadow-color);
+  border: 1px solid var(--glass-border); /* Force GPU */
   will-change: transform, opacity;
 }
