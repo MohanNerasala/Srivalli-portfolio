@@ -7,6 +7,7 @@
   overflow: hidden;
   
   /* Force dark mode variables for Hero section only */
+  --bg-dark: #070707;
   --text-main: #ffffff;
   --text-muted: #a1a1aa;
   --card-bg: rgba(15, 15, 15, 0.85);
