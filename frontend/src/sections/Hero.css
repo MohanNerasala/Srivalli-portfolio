@@ -14,6 +14,7 @@
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-bg: rgba(20, 20, 25, 0.6);
   color: var(--text-main);
+  background-color: var(--bg-dark);
 }
 
 .hero-video-wrapper {
@@ -191,6 +192,7 @@
   .hero-video {
     object-position: right top; /* Pushes her as far left as possible without exposing the right edge */
     height: 55vh; /* Dramatically zooms her out */
+    transform: translateY(10%); /* Pushes her down since she is smaller */
   }
   .hero-overlay {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 1) 100%);
