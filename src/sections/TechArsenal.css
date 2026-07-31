@@ -1,0 +1,92 @@
+.tech-section {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+
+.tech-subheading {
+  color: var(--text-muted);
+  margin-bottom: 6rem;
+  font-size: 1.1rem;
+}
+
+.constellation-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-node {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(var(--primary-rgb), 0.1);
+  border: 1px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.2);
+}
+
+.center-node-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.initials {
+  color: var(--primary);
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  font-size: 0.6rem;
+  color: var(--text-main);
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+
+.tech-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 0.75rem 1.25rem;
+  border-radius: 100px;
+  cursor: default;
+
+
+  transform-origin: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tech-node:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.1);
+}
+
+.tech-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.tech-name {
+  color: var(--text-main);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}

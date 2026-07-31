@@ -1,0 +1,91 @@
+.contact-section {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.contact-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px; /* Increased from 600px to allow one line */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-title {
+  font-size: clamp(1.5rem, 3.5vw, 3rem); /* Slightly smaller on mobile to help fit */
+  margin-bottom: 3rem; 
+  /* Removed nowrap to ensure mobile layout doesn't break, it will naturally be one line on desktop */
+}
+
+.contact-description {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.social-cards {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 24px;
+  color: var(--text-main);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  background: rgba(15, 15, 15, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+}
+
+.social-card span {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.social-card:hover {
+  color: var(--bg-dark);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(var(--primary-rgb), 0.3);
+}
+
+.social-card:hover svg {
+  transform: scale(1.1);
+}
+
+.footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-built {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
