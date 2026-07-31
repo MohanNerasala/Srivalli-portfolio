@@ -53,6 +53,15 @@
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Force dark mode variables for terminal always */
+  --card-bg: rgba(15, 15, 15, 0.95);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-muted: #a1a1aa;
+  --text-main: #ffffff;
+  --primary: #d4af37;
+  color: var(--text-main);
+  background-color: var(--card-bg);
 }
 
 .about-terminal:hover {
