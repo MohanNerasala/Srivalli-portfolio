@@ -9,6 +9,13 @@
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
+/* Force text to be white when navbar is over the dark hero section (not scrolled) */
+.navbar:not(.scrolled) .logo-text,
+.navbar:not(.scrolled) .nav-link,
+.navbar:not(.scrolled) .icon-button {
+  color: #ffffff;
+}
+
 .navbar.scrolled {
   background-color: var(--glass-bg);
   backdrop-filter: blur(12px);
