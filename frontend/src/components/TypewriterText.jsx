@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion';
 const TypewriterText = ({ text, delay = 0, className = "" }) => {
   const [displayedText, setDisplayedText] = useState("");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10%" });
+  const isInView = useInView(ref, { once: true, margin: "0px" });
 
   useEffect(() => {
     if (!isInView) return;
