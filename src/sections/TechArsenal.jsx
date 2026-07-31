@@ -15,6 +15,18 @@ const techStack = [
 ];
 
 const TechArsenal = () => {
+  const [radius, setRadius] = React.useState(180);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setRadius(window.innerWidth <= 768 ? 150 : 180);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section id="skills" className="tech-section section-container">
       <div className="section-header">
@@ -25,21 +37,20 @@ const TechArsenal = () => {
         <div className="gold-line"></div>
       </div>
       
-      <p className="tech-subheading">
+      <div className="tech-subheading">
         <FadeIn delay={0.2}>A dynamic constellation of my primary stack and secondary toolset. Hover to explore.</FadeIn>
-      </p>
+      </div>
       
       <div className="constellation-container">
         <div className="center-node glass-panel">
           <div className="center-node-content">
-            <span className="initials">S V</span>
+            <span className="initials">N M</span>
             <span className="subtitle">AI + FULL STACK</span>
           </div>
         </div>
         
         {techStack.map((tech, index) => {
           const angle = (index / techStack.length) * Math.PI * 2;
-          const radius = 180; // Distance from center
           
           return (
             <motion.div

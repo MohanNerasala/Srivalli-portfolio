@@ -61,6 +61,7 @@ const Hero = () => {
         <div className="accent-name-container">
           <div className="gold-line"></div>
           <span className="accent-name">SRIVALLI</span>
+          <div className="gold-line mobile-only-line"></div>
         </div>
         
         <h1 className="hero-title">

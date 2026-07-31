@@ -114,10 +114,68 @@
   }
   .mobile-menu-btn {
     display: flex;
+    z-index: 1001; /* Above the overlay */
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+  }
+
+  .mobile-menu-overlay.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .mobile-nav-link {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--text-main);
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--primary);
+  }
+
+  .mobile-hire-btn {
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--primary);
+    color: var(--bg-dark);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
   }
 }
 @media (min-width: 769px) {
   .mobile-menu-btn {
+    display: none;
+  }
+  .mobile-menu-overlay {
     display: none;
   }
 }

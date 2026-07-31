@@ -20,11 +20,13 @@ const About = () => {
             <SlideUp delay={0.2} el="div">I BUILD THINGS</SlideUp>
             <SlideUp delay={0.4} el="div" className="gold-text">THAT MATTER</SlideUp>
           </h2>
-          <FadeIn delay={0.6}>
-            <p className="about-description">
-              I'm a Full Stack and AI Developer passionate about architecting scalable systems and creating intuitive user experiences. By bridging the gap between complex machine learning models and seamless frontends, I build digital products that drive real value.
-            </p>
-          </FadeIn>
+          <div className="mobile-hidden">
+            <FadeIn delay={0.6}>
+              <div className="about-description">
+                I'm a Full Stack and AI Developer passionate about architecting scalable systems and creating intuitive user experiences. By bridging the gap between complex machine learning models and seamless frontends, I build digital products that drive real value.
+              </div>
+            </FadeIn>
+          </div>
         </div>
         
         <div className="about-terminal glass-panel">
@@ -49,18 +51,9 @@ const About = () => {
             </div>
             <div className="terminal-output json-output">
               <TypewriterText text='{
-  "name": "Srivalli",
   "role": "AI Application Developer",
-  "stack": ["Java", "HTML", "CSS", "JS"],
-  "passion": "Building intelligent solutions"
+  "stack": ["Java", "HTML", "CSS", "JS"]
 }' delay={1.5} className="whitespace-pre" />
-            </div>
-            
-            <div className="terminal-line">
-              <span className="prompt">$</span> <span className="command">echo $passion</span>
-            </div>
-            <div className="terminal-output">
-              <TypewriterText text="> Building real products with AI tools" delay={4.0} />
             </div>
           </div>
         </div>

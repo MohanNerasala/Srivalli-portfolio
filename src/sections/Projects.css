@@ -51,16 +51,24 @@
 }
 
 @media (max-width: 768px) {
-  .project-card, .project-card:nth-child(even) {
-    grid-template-columns: 1fr;
-  }
-  
-  .project-card:nth-child(even) .project-content {
-    order: 1;
+  .projects-grid {
+    gap: 8rem; /* Increased gap so projects don't crowd each other */
   }
 
-  .project-card:nth-child(even) .project-image-placeholder {
+  .project-card, .project-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-content {
+    padding: 1.5rem !important; /* Force smaller padding on mobile */
     order: 2;
+  }
+
+  .project-image-placeholder {
+    order: 1; /* Image always on top on mobile */
+    min-height: 220px !important; /* Force override */
   }
 }
 

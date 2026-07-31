@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { Menu, Moon } from 'lucide-react';
+import { Menu, Moon, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -63,9 +64,24 @@ const Navbar = () => {
             <Moon size={18} />
           </button>
           <a href="#contact" className="hire-me-btn">HIRE ME</a>
-          <button className="icon-button mobile-menu-btn" aria-label="Menu">
-            <Menu size={24} />
+          <button 
+            className="icon-button mobile-menu-btn" 
+            aria-label="Menu"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+        </div>
+      </div>
+      
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-nav-links">
+          <a href="#about" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>ABOUT</a>
+          <a href="#skills" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>SKILLS</a>
+          <a href="#projects" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>PROJECTS</a>
+          <a href="#contact" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>CONTACT</a>
+          <a href="#contact" className="mobile-nav-link mobile-hire-btn" onClick={() => setIsMobileMenuOpen(false)}>HIRE ME</a>
         </div>
       </div>
     </nav>

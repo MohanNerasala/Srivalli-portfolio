@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Projects.css';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
@@ -12,6 +12,14 @@ const placeholderProjects = [
 ];
 
 const Projects = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   return (
     <section id="projects" className="projects-section section-container">
       <div className="section-header">
@@ -22,19 +30,19 @@ const Projects = () => {
         <div className="gold-line"></div>
       </div>
       
-      <p className="projects-subheading">
+      <div className="projects-subheading">
         <FadeIn delay={0.4}>Scroll down to explore my recent projects.</FadeIn>
-      </p>
+      </div>
       
       <div className="projects-grid">
         {placeholderProjects.map((project, index) => (
           <motion.div 
             key={project.id}
             className="project-card"
-            initial={{ opacity: 0, y: 100, scale: 0.95 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false, margin: "-20%" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+            initial={isMobile ? { opacity: 0, y: 150, scale: 0.85, rotateX: 20 } : { opacity: 0, y: 100, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+            viewport={{ once: false, margin: isMobile ? "-15%" : "-20%" }}
+            transition={{ duration: isMobile ? 1 : 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           >
             <div className="project-content">
               <div className="project-meta">
