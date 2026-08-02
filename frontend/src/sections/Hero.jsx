@@ -60,7 +60,7 @@ const Hero = () => {
       <div className="hero-content section-container">
         <div className="accent-name-container">
           <div className="gold-line"></div>
-          <span className="accent-name">SRIVALLI</span>
+          <span className="accent-name">SAI SRIVALLI</span>
           <div className="gold-line mobile-only-line"></div>
         </div>
         
@@ -72,7 +72,7 @@ const Hero = () => {
         
         <div className="hero-description-box">
           <FadeIn delay={0.6}>
-            <p>Hi, I am <span className="bold-text">Srivalli</span>, a Full Stack AI Application Developer.</p>
+            <p>Hi, I am <span className="bold-text">Sai Srivalli</span>, a Full Stack AI Application Developer.</p>
           </FadeIn>
         </div>
         

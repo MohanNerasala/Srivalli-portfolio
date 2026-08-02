@@ -36,14 +36,14 @@ const About = () => {
               <span className="dot yellow"></span>
               <span className="dot green"></span>
             </div>
-            <div className="terminal-title">guest@srivalli.dev:~</div>
+            <div className="terminal-title">guest@saisrivalli.dev:~</div>
           </div>
           <div className="terminal-body">
             <div className="terminal-line">
               <span className="prompt">$</span> <span className="command">whoami</span>
             </div>
             <div className="terminal-output">
-              <TypewriterText text="> Srivalli" delay={0.5} />
+              <TypewriterText text="> Sai Srivalli" delay={0.5} />
             </div>
             
             <div className="terminal-line">

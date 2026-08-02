@@ -46,7 +46,7 @@ const Contact = () => {
       </div>
       
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Srivalli. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Sai Srivalli. All rights reserved.</p>
         <p className="footer-built">Built with React & Framer Motion</p>
       </footer>
     </section>
