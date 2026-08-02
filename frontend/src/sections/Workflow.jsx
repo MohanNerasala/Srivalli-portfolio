@@ -26,19 +26,16 @@ const Workflow = () => {
       
       <div className="workflow-content">
         <div className="workflow-track-container">
-          <div className="workflow-connecting-line"></div>
           <div className="workflow-track">
-            {tools.map((tool, index) => (
-              <FadeIn key={tool.name} delay={0.2 + (index * 0.1)}>
-                <div className="workflow-node">
-                  <div className="workflow-card">
-                    <div className="tool-icon">{tool.icon}</div>
-                    <h4 className="tool-name">{tool.name}</h4>
-                    <p className="tool-desc">{tool.desc}</p>
-                    <div className="glow-border"></div>
-                  </div>
+            {[...tools, ...tools].map((tool, index) => (
+              <div key={`${tool.name}-${index}`} className="workflow-node">
+                <div className="workflow-card">
+                  <div className="tool-icon">{tool.icon}</div>
+                  <h4 className="tool-name">{tool.name}</h4>
+                  <p className="tool-desc">{tool.desc}</p>
+                  <div className="glow-border"></div>
                 </div>
-              </FadeIn>
+              </div>
             ))}
           </div>
         </div>
